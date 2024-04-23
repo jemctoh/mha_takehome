@@ -1,0 +1,19 @@
+{
+  "name": "mha_takehome",
+  "version": "1.0.0",
+  "description": "backend API with 3 endpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.9",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/vision": "^7.0.3",
+    "hapi-swagger": "^17.2.1",
+    "joi": "^17.13.0"
+  }
+}

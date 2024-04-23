@@ -1,0 +1,4 @@
+GET /pet/1 @ 24/4/24, 4:43:16 am
+GET /pet/6 @ 24/4/24, 4:43:23 am
+POST /pet @ 24/4/24, 4:44:10 am
+DELETE /remove-pet/2 @ 24/4/24, 4:44:35 am
