@@ -5,6 +5,9 @@ const Vision = require('@hapi/vision');
 const fs = require('fs');
 const path = require('path');
 
+// dependency injection --> a store service
+const PetStoreService = require('./services/PetStoreService');
+
 // Use the Intl.DateTimeFormat API to format the date in Singapore time
 const singaporeTimeFormatter = new Intl.DateTimeFormat('en-SG', {
     timeZone: 'Asia/Singapore',
@@ -34,8 +37,11 @@ const init = async () => {
         }
     ]);
 
+    // Create a new instance of the PetStoreService
+    const petStoreService = new PetStoreService();
+
     // List of paths to include in logging
-    const logPaths = ['/pet/{id}', '/remove-pet/{id}', '/new-pet'];
+    const logPaths = ['/pets/{id}', '/remove-pet/{id}', '/new-pet'];
     
     // Log all incoming requests
     server.ext('onRequest', (request, h) => {
@@ -73,9 +79,9 @@ const init = async () => {
     const addPetToJson = require('./routes/addPetToJson');
     const deletePetFromJson = require('./routes/deletePetFromJson');
 
-    server.route(getPetById);
-    server.route(addPetToJson);
-    server.route(deletePetFromJson);
+    server.route(getPetById(petStoreService));
+    server.route(addPetToJson(petStoreService));
+    server.route(deletePetFromJson(petStoreService));
 
     await server.start();
     console.log('Server running on %s', server.info.uri);
@@ -83,9 +89,12 @@ const init = async () => {
     return server;
 }
 
-// init().catch(err => {
-//     console.error(err);
-//     process.exit(1);
-// });
+
+if (process.env.NODE_ENV !== 'test') {
+    init().catch(err => {
+        console.error(err);
+        process.exit(1);
+    });
+}
 
 module.exports = init;

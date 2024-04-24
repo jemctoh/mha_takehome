@@ -51,7 +51,7 @@ describe('Hapi.js Server Tests', () => {
         // Define a GET request to the /pets/{id} route with id = 1
         const request = {
             method: 'GET',
-            url: '/pet/' + insertId
+            url: '/pets/' + insertId
         };
 
         // Send the request using the server's inject method

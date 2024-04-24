@@ -1,6 +1,6 @@
 [
   {
-    "id": 3,
+    "id": 1,
     "name": "Terry",
     "animal": "Rabbit",
     "color": "Brown"
@@ -9,18 +9,18 @@
     "name": "Dracula",
     "animal": "Bat",
     "color": "Grey",
-    "id": 5
+    "id": 2
   },
   {
     "name": "Bacon",
     "animal": "Hamster",
     "color": "Marble",
-    "id": 6
+    "id": 3
   },
   {
     "name": "Crabby",
     "animal": "Crab",
     "color": "Grey",
-    "id": 7
+    "id": 4
   }
 ]

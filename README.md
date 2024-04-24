@@ -12,7 +12,7 @@ Validate requests to add and del objects based on fields -- DONE
 
 Unit tests to test the endpoints -- DONE
 
-Implement any dependency injection (?)
+Implement any dependency injection -- DONE
 
 Deploy to cloud 
 
@@ -25,3 +25,7 @@ object chosen:
 Chose Hapi.js and Swagger as it provides clear API Documentation.
 
 Unit Test using Jest.
+
+Dependency Injection
+--> created a pet store service that handles the data in the json file.
+--> this reduced the number of imports made in the routes, and allowed the logic to be abstracted and can reduce complexity when writing new routes in future.

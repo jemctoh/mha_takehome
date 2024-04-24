@@ -2,9 +2,9 @@
   "name": "mha_takehome",
   "version": "1.0.0",
   "description": "backend API with 3 endpoints",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "jest --detectOpenHandles  --watchAll --maxWorkers=1"
   },
   "keywords": [],
