@@ -14,7 +14,7 @@ Unit tests to test the endpoints -- DONE
 
 Implement any dependency injection -- DONE
 
-Deploy to cloud 
+Deploy to cloud -- DONE
 
 ========================= DESIGN ===========================
 
@@ -29,3 +29,30 @@ Unit Test using Jest.
 Dependency Injection
 --> created a pet store service that handles the data in the json file.
 --> this reduced the number of imports made in the routes, and allowed the logic to be abstracted and can reduce complexity when writing new routes in future.
+
+========== Running on local ==========
+
+1. with nodejs
+
+npm install
+npm start
+
+go to localhost:3000/documentation to use swagger ui
+
+> to test, npm test
+
+2. with docker
+
+chmod +x run.sh
+./run.sh
+
+=========== Cloud Deployment ============
+
+Bought a small VM on Google Cloud Platform using free $300 student credits.
+
+Copied docker image (.tar file) to VM.
+Run it using docker.
+Configure Firewall Rules.
+
+The page is accessible on http://34.16.137.76:3000/documentation .
+

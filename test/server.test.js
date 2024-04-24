@@ -1,4 +1,3 @@
-const Hapi = require('@hapi/hapi');
 const init = require('../server.js'); // Import the init function from the server file
 
 let insertId = 0;
