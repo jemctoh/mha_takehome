@@ -34,21 +34,22 @@ Dependency Injection
 
 1. with nodejs
 
-npm install
-npm start
+> npm install
+> npm start
 
-go to localhost:3000/documentation to use swagger ui
+go to localhost:3000/documentation to view swagger ui
 
-> to test, npm test
+to test, 
+> npm test
 
 2. with docker
 
-chmod +x run.sh
-./run.sh
+> chmod +x run.sh
+> ./run.sh
 
 =========== Cloud Deployment ============
 
-Bought a small VM on Google Cloud Platform using free $300 student credits.
+Bought a small VM on Google Cloud Platform using free student credits.
 
 Copied docker image (.tar file) to VM.
 Run it using docker.
