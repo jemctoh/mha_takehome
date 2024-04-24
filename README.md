@@ -35,6 +35,7 @@ Dependency Injection
 1. with nodejs
 
 > npm install
+
 > npm start
 
 go to localhost:3000/documentation to view swagger ui
@@ -45,6 +46,7 @@ to test,
 2. with docker
 
 > chmod +x run.sh
+
 > ./run.sh
 
 =========== Cloud Deployment ============
