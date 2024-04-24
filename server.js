@@ -35,7 +35,7 @@ const init = async () => {
     ]);
 
     // List of paths to include in logging
-    const logPaths = ['/pet/{id}', '/remove-pet/{id}', '/pet'];
+    const logPaths = ['/pet/{id}', '/remove-pet/{id}', '/new-pet'];
     
     // Log all incoming requests
     server.ext('onRequest', (request, h) => {
@@ -79,9 +79,13 @@ const init = async () => {
 
     await server.start();
     console.log('Server running on %s', server.info.uri);
+
+    return server;
 }
 
-init().catch(err => {
-    console.error(err);
-    process.exit(1);
-});
+// init().catch(err => {
+//     console.error(err);
+//     process.exit(1);
+// });
+
+module.exports = init;

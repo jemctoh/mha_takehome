@@ -6,7 +6,7 @@ const petsFilePath = path.join(__dirname, '../data/pets.json')
 
 module.exports = {
     method: 'POST',
-    path: '/pet',
+    path: '/new-pet',
     options: {
         handler: (request, reply) => {
 

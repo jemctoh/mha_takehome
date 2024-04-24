@@ -10,7 +10,7 @@ Request Logger -- DONE
 
 Validate requests to add and del objects based on fields -- DONE
 
-Unit tests to test the endpoints
+Unit tests to test the endpoints -- DONE
 
 Implement any dependency injection (?)
 
@@ -20,4 +20,8 @@ Deploy to cloud
 
 object chosen: 
 
-pets(id, name, animal, color)
+    pets(id, name, animal, color)
+
+Chose Hapi.js and Swagger as it provides clear API Documentation.
+
+Unit Test using Jest.

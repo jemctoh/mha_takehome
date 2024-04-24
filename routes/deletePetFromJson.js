@@ -13,13 +13,15 @@ module.exports = {
             const petId = request.params.id;
             const pets = JSON.parse(fs.readFileSync(petsFilePath, 'utf-8'));
 
-            // Find the pet by id
-            const petIndex = pets.findIndex(pet => pet.id === petId); 
+            // Find the pet object id in the array
+            const petIndex = pets.findIndex(pet => pet.id === petId);
+            // Get pet object (for response only)
+            const petToDelete = pets.find(pet => pet.id === petId);
             // findIndex returns -1 if not found
             if (petIndex !== -1) {
                 pets.splice(petIndex, 1);
                 fs.writeFileSync(petsFilePath, JSON.stringify(pets, null, 2), 'utf-8');
-                return reply.response("Pet with ID= " + petId + " has been removed.").code(204);
+                return reply.response(petToDelete).code(204);
             } else {
                 return reply.response({ error: 'Pet does not exist' }).code(404);
             }
